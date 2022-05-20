@@ -26,7 +26,10 @@ public class C06_KeyboardActions extends TestBase {
                 .sendKeys(Keys.TAB)
                 .sendKeys("Ustaoglu")
                 .sendKeys(Keys.TAB)
-                .sendKeys("ghfdf@gmail.com").perform();
+                .sendKeys("ghfdf@gmail.com").sendKeys(Keys.TAB).sendKeys("ghfdf@gmail.com").sendKeys(Keys.TAB).
+                sendKeys("aw332233").sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys("mai").sendKeys(Keys.TAB).
+                sendKeys("sali").sendKeys(Keys.TAB).sendKeys("2022").sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys(Keys.ARROW_DOWN).
+                sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys(Keys.ENTER).perform();
         Thread.sleep(5000);
     }
 }

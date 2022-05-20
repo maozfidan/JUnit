@@ -10,19 +10,32 @@ import utilities.TestBase;
 public class C05_KeyboardActions extends TestBase {
 
     @Test
-
-    public  void test01() {
-
+    public void test01() throws InterruptedException {
         driver.get("https://www.amazon.com");
+        WebElement aramaKutusu=driver.findElement(By.id("twotabsearchtextbox"));
 
-        WebElement aramaKutusu = driver.findElement(By.id("twotabsearchtextbox"));
+        // once arama kutusuna click yapip
+        // sonra harf harf Nutella yazisini yazdiralim
+        // sonra da ENTER tusuna basalim
 
-        Actions actions =new Actions(driver);
-        actions.click(aramaKutusu).perform();
+        Actions actions=new Actions(driver);
 
-        actions.keyDown(Keys.SHIFT).perform();
+        actions.click(aramaKutusu)
+                .keyDown(Keys.SHIFT)
+                .sendKeys("n")
+                .keyUp(Keys.SHIFT)
+                .sendKeys("u")
+                .sendKeys("t")
+                .sendKeys("e")
+                .sendKeys("l")
+                .sendKeys("l")
+                .sendKeys("a")
+                .sendKeys(Keys.ENTER)
+                .perform();
 
-        actions.sendKeys("n").perform();
+
+
+        Thread.sleep(5000);
 
     }
 }
