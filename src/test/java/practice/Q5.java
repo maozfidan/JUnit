@@ -8,10 +8,11 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import utilities.TestBase;
 
 import java.time.Duration;
 
-public class Q5 {
+public class Q5 extends TestBase {
 
     /*
        ...Exercise5...
@@ -23,4 +24,9 @@ public class Q5 {
 
        */
 
+    @Test
+    public void name() {
+
+        driver.get("https://www.amazon.com");
+    }
 }
